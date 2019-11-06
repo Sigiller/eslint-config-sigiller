@@ -26,7 +26,6 @@ module.exports = {
         "no-invalid-regexp": "error",
         "no-irregular-whitespace": "off",
         "no-obj-calls": "error",
-        "no-prototype-builtins": "warn",
         "no-regex-spaces": "warn",
         "no-sparse-arrays": "error",
         "no-template-curly-in-string": "error",
@@ -35,7 +34,6 @@ module.exports = {
         "no-unsafe-finally": "warn",
         "no-unsafe-negation": "warn",
         "use-isnan": "warn",
-        "valid-jsdoc": "warn",
         "valid-typeof": "error",
 
         "accessor-pairs": ["warn", {
@@ -101,7 +99,6 @@ module.exports = {
         "no-redeclare": "warn",
         "no-restricted-properties": "off",
         "no-return-assign": "warn",
-        "no-return-await": "warn",
         "no-script-url": "error",
         "no-self-assign": ["error", {
             "props": false
@@ -129,7 +126,7 @@ module.exports = {
         "no-unused-vars": ["warn", {
             "varsIgnorePattern": "React"
         }],
-        "no-use-before-define": "warn",
+        "no-use-before-define": "off",
 
         "no-new-require": "warn",
 
@@ -138,7 +135,9 @@ module.exports = {
         "brace-style": ["warn", "1tbs", {
             "allowSingleLine": true
         }],
-        "camelcase": "warn",
+        "camelcase": ["error", {
+            "allow": ["UNSAFE_componentWillMount", "UNSAFE_componentWillUpdate", "UNSAFE_componentWillReceiveProps"]
+        }],
         "comma-dangle": ["warn", "never"],
         "comma-spacing": ["warn", {
             "before": false,
@@ -218,7 +217,7 @@ module.exports = {
         }],
         "object-curly-spacing": ["warn", "always"],
         "object-property-newline": "warn",
-        "operator-linebreak": ["warn", "none", { "overrides": { "?": "after", ":": "after" }}],
+        "operator-linebreak": "off",
         "padded-blocks": ["warn", {
             "blocks": "never",
             "classes": "always",
